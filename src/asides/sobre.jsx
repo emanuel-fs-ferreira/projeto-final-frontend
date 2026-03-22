@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import Rodape from "./rodape";
 
 function Sobre() {
-  const navigate = useNavigate();
-
   return (
     <div>
       <header>
@@ -15,29 +13,15 @@ function Sobre() {
         <p>
           Olá, sou o Emanuel Felipe. Tenho 18 anos e moro em Itabira - MG; gosto
           de esportes, principalmente basquete, vôlei e xadrez, gosto de
-          tecnologia em geral e também de me desafiar sempre que posso,
+          tecnologia em geral e também de me desafiar sempre que posso.
         </p>
       </main>
       <hr />
-      <footer>
-        <ul class="rodape">
-          <li>
-            <a id="inicio" onClick={() => navigate("/")}>
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a id="produtos" onClick={() => navigate("/")}>
-              Produtos
-            </a>
-          </li>
-          <li>
-            <a id="contato" onClick={() => navigate("/contato")}>
-              Contato
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <element>
+        <Rodape/>
+      </element>
     </div>
   );
 }
+
+export default Sobre

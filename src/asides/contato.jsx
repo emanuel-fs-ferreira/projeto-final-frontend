@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Rodape from "./rodape";
 
 function Contato() {
   const navigate = useNavigate();
@@ -25,23 +26,9 @@ function Contato() {
         </p>
       </main>
       <hr/>
-      <footer>
-        <ul class="rodape">
-          <li>
-            <a id="inicio" onClick={() => navigate("/")}>
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a id="produtos" onClick={() => navigate("/")}>
-              Produtos
-            </a>
-          </li>
-          <li>
-            <a id="sobre">Sobre</a>
-          </li>
-        </ul>
-      </footer>
+      <element>
+        <Rodape/>
+      </element>
     </div>
   );
 }

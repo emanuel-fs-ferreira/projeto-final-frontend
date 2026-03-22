@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Rodape from "../asides/rodape";
 
 function ProdutoEscolhido() {
   const location = useLocation();
@@ -17,14 +18,9 @@ function ProdutoEscolhido() {
           <p>Produto não encontrado. <button onClick={() => navigate('/')}>Voltar à lista</button></p>
         </main>
         <hr />
-        <footer>
-          <ul className="rodape">
-            <li><a id="inicio">Inicio</a></li>
-            <li><a id="produtos">Produtos</a></li>
-            <li><a id="contato">Contato</a></li>
-            <li><a id="sobre">Sobre</a></li>
-          </ul>
-        </footer>
+        <element>
+          <Rodape/>
+        </element>
       </div>
     );
   }
@@ -71,18 +67,14 @@ function ProdutoEscolhido() {
             <p><strong>Categoria:</strong> {product.category}</p>
             <p><strong>Tipo:</strong> {product.type}</p>
             <p><strong>Tamannhos:</strong> {product.size.join(", ")}</p>
+            <p><strong>Em estoque:</strong> {product.stock} unidades</p>
           </div>
         </div>
       </main>
       <hr />
-      <footer>
-        <ul class="rodape">
-          <li><a id="inicio" onClick={() => navigate('/')}>Inicio</a></li>
-          <li><a id="produtos" onClick={() => navigate('/')}>Produtos</a></li>
-          <li><a id="contato" onClick={() => navigate('/contato')}>Contato</a></li>
-          <li><a id="sobre">Sobre</a></li>
-        </ul>
-      </footer>
+      <element>
+        <Rodape/>
+      </element>
     </div>
   );
 }
